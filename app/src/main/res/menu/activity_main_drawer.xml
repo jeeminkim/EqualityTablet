@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_console"
+            android:icon="@drawable/perm_group_network"
+            android:title="데이터 송수신 확인" />
+        <item
+            android:id="@+id/nav_function"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="블루투스 기능 버튼" />
+        <item
+            android:id="@+id/nav_file"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="증상 기록"/>
+        <item
+            android:id="@+id/nav_human"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="증상 알아 보기"/>
+        <item
+            android:id="@+id/nav_record"
+            android:icon="@drawable/ic_menu_send"
+            android:title="건강 정보"/>
+
+    </group>
+
+</menu>
