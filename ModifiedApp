@@ -1,1 +1,114 @@
+통신확인을 위한 Function Fragment 버튼 부분.
 
+
+
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import kr.co.mdigit.mcucontroller.MainActivity;
+import kr.co.mdigit.mcucontroller.R;
+
+
+public class FunctionFragment extends Fragment {
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_function, container, false);
+        Log.d("FunctionFragment", "onCreateView()");
+
+        ((Button)v.findViewById(R.id.btn001)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Message msg = mHandler.obtainMessage();
+                msg.what = MainActivity.BT_RESULT_WRITE;
+                msg.obj = (String) ("L0," + "S"+":0" +"\n");
+                mHandler.sendMessage(msg);
+            }
+        });
+        ((Button)v.findViewById(R.id.btn002)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Message msg = new Message();
+                msg.what = MainActivity.BT_RESULT_WRITE;
+                msg.obj = (String) ("L0," + "S" + ":1" + "\n");
+                mHandler.sendMessage(msg);
+
+            }
+        });
+        ((Button)v.findViewById(R.id.btn003)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Message msg = mHandler.obtainMessage();
+                msg.what = MainActivity.BT_RESULT_WRITE;
+                msg.obj = (String) ("K0," + "S"+":0" +"\n");
+                mHandler.sendMessage(msg);
+            }
+        });
+        ((Button)v.findViewById(R.id.btn004)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Message msg = new Message();
+                msg.what = MainActivity.BT_RESULT_WRITE;
+                msg.obj = (String)("K0," + "S"+":1" +"\n");
+                mHandler.sendMessage(msg);
+
+            }
+        });
+        return v;
+    }
+    Handler mHandler = null;
+    public void setHandler(Handler mHandler){
+        this.mHandler = mHandler;
+    }
+}
+
+Function Fragment Layout.
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn001"
+                android:text="Button 001"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn002"
+                android:text="Button 002"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn003"
+                android:text="Button 003"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn004"
+                android:text="Button 004"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
