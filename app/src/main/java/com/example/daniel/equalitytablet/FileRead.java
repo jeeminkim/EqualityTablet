@@ -23,7 +23,7 @@ public class FileRead extends Activity {
     }
     public void read(View view) {
     try{
-        fis=openFileInput("symptoms2.txt");
+        fis=openFileInput("symptoms4.txt");
         StringBuffer sbuf=new StringBuffer();
         byte[]buf=new byte[40];
         while((fis.read(buf,0,40))!=-1){

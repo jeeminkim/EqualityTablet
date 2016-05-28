@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity
     FileFragment fileFragment = null;
     SelectFragment selectFragment =null;
     RecordFragment recordFragment = null;
-
     public static final int BT_RESULT_CONNECTED = 0x30;
     public static final int BT_RESULT_DISCONNECTED = 0x31;
     public static final int BT_RESULT_WRITE = 0x32;
@@ -272,7 +271,6 @@ public class MainActivity extends AppCompatActivity
                     .replace(R.id.container, recordFragment)
                     .commit();
         }
-
          else if (id == R.id.nav_function) {
             Toast.makeText(this, "기능 버튼", Toast.LENGTH_LONG).show();
             if(functionFragment == null){

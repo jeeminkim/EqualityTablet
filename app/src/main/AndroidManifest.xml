@@ -33,6 +33,7 @@
         <activity android:name=".SMS.ReadSMSMessage"/>
         <activity android:name=".SMS.SendSMS"/>
         <activity android:name=".Weather"/>
+        <activity android:name=".Scope"/>
         <activity
             android:name=".Bluetooth.DeviceListActivity"
             android:label="@string/app_name" >

@@ -31,7 +31,7 @@ public class FileSave extends Activity{
         Date nowdate = new Date();
         String dateString = sdf.format(nowdate);
         try{
-            fos=openFileOutput("symptoms2.txt",MODE_APPEND);
+            fos=openFileOutput("symptoms4.txt",MODE_APPEND);
             fos.write(et.getText().toString().getBytes());
             fos.write(dateString.getBytes());
             //fos.write(sdf.getText().toString().getBytes());

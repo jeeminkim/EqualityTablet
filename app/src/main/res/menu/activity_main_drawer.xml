@@ -23,6 +23,8 @@
             android:icon="@drawable/ic_menu_send"
             android:title="건강 정보"/>
 
+
+
     </group>
 
 </menu>

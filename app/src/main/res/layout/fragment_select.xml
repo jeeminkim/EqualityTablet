@@ -20,6 +20,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn4"
             android:text="동물이 아파요"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn5"
+            android:text="결과가 알고 싶어요"/>
 
     </LinearLayout>
 

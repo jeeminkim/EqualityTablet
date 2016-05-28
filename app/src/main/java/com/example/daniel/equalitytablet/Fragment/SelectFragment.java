@@ -17,6 +17,7 @@ import com.example.daniel.equalitytablet.FileRead;
 import com.example.daniel.equalitytablet.FileSave;
 import com.example.daniel.equalitytablet.PersonState;
 import com.example.daniel.equalitytablet.R;
+import com.example.daniel.equalitytablet.Scope;
 
 public class SelectFragment extends Fragment {
 
@@ -37,6 +38,15 @@ public class SelectFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (getActivity().getApplicationContext(),AnimalState.class);
+                startActivity(intent);
+            }
+        });
+
+        ((Button)v.findViewById(R.id.btn5)).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getActivity().getApplicationContext(),Scope.class);
                 startActivity(intent);
             }
         });
